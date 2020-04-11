@@ -19,7 +19,7 @@
 		int second = atoi(argv[2]); //2nd numerical argument
 		double result = 0;
 
-	//compute sum
+	//compute sum of sqrt
 		for(int i = first; i < second + 1; i++){
 			result += sqrt(i);
 		}
