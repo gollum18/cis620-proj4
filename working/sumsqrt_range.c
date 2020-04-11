@@ -7,7 +7,7 @@
 	#include <math.h>
 
 //start function
-int main(int argc, char *argv[]){
+	int main(int argc, char *argv[]){
 	//check arguments(this will need to change when moved because client takes 4 args)
 		if(argc != 3){//1st arg is executable callout
 			printf("\n2 numbers are required!\n");
