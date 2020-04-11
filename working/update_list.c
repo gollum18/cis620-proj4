@@ -9,7 +9,7 @@
 	int main(int argc, char *argv[]){
 	//get the arguments
 		int array[argc - 1]; //-1 for size because 1st argument is executable name
-	//compute sum
+	//compute F * F/10.0
 		for(int i = 1; i < argc; i++){
 			double input = atoi(argv[i]);
 			double result = input * input / 10.0;
