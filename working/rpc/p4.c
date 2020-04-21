@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <rpc/rpc.h>
+#include <string.h>
 #include "p4.h"
 
 int main(argc, argv)
@@ -20,7 +21,16 @@ int main(argc, argv)
     exit(1);
   }
 
-  switch (key = atol(argv[2])) {
+  if (strcmp(argv[2], "-r") == 0) {
+    key = SUMSQRT_RANGE;
+  } else if (strcmp(argv[2], "-u") == 0) {
+    key = UPDATE_LIST;
+  } else {
+    perror("key error");
+    exit(1);
+  }
+
+  switch (key) {
   case SUMSQRT_RANGE:
     if (argc < 5) {
         fputs("Error: SUMSQRT_RANGE requires a lower and upper bound!\n", stderr);
