@@ -52,3 +52,7 @@ clean:
 
 $(APPN).ar: $(RSRC)
 	bundle $(RSRC) > $(APPN).ar
+
+# turnin command
+submit:
+	turnin -c cis620s -p proj4 makefile report.pdf rcalc.x rcalc.c rcalc_svc_proc.c
